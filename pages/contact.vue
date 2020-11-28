@@ -49,7 +49,7 @@ v-row.mb-10(no-gutters, align='center')
           max-width='min-content',
           large,
           rounded,
-          color='accent'
+          color='secondary'
         ) Send Message
 </template>
 

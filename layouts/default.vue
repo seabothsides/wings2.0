@@ -1,6 +1,6 @@
 <template lang="pug">
 v-app
-  v-main 
+  v-main.bluealt1 
     nuxt
 </template>
 

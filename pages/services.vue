@@ -1,6 +1,6 @@
 <template lang="pug">
 v-container.mb-10
-  p.text-center {{ services.title }}
+  p.text-center.text-h2.text-capitalize {{ services.title }}
   v-row
     v-col(
       v-for='(i, index) in services.services.title',
@@ -8,12 +8,16 @@ v-container.mb-10
       cols='12',
       md='6'
     )
-      v-card.mb-sm-8.pa-5.mx-sm-auto(max-width='550')
+      v-card.mb-sm-8.pa-5.mx-sm-auto(max-width='550', color='#f8f8f8')
         v-row
           v-col.text-center(cols='12')
-            v-expansion-panels(flat)
+            v-expansion-panels(flat, inset)
               v-expansion-panel
-                v-expansion-panel-header.justify-center(hide-actions) {{ services.services.title[index] }}
+                v-expansion-panel-header.justify-center(
+                  hide-actions,
+                  color='light-blue lighten-1'
+                ) 
+                  p.text-center.title.mb-n1 {{ services.services.title[index] }}
                 v-expansion-panel-content.text-justify {{ services.services.content[index] }}
           v-col(cols='12', order='first', justify='center')
             v-img.mx-auto(
@@ -33,3 +37,9 @@ export default {
   },
 }
 </script>
+
+<style lang="sass" scoped>
+.v-expansion-panel
+  .v-expansion-panel-header
+    color: #fff !important
+</style>

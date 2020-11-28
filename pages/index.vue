@@ -2,7 +2,7 @@
 v-container(fluid, fill-height)
   v-row
     v-col(cols=12, align='center')
-      h1 {{ landing.title }}
+      h1.text-capitalize {{ landing.title }}
       v-layout(align-center, justify-center)
         v-sheet(height='75vh')
         v-row
@@ -22,7 +22,7 @@ v-container(fluid, fill-height)
             )
               v-icon mdi-file-pdf
     v-col(cols=12, align='center')
-      v-btn(text, to='services', color='secondary') {{ landing.services.cta }}
+      v-btn(to='services', color='secondary', x-large) {{ landing.services.cta }}
       v-layout(align-center, justify-center)
         v-sheet(height='40vh')
         v-row(dense)
@@ -37,7 +37,8 @@ v-container(fluid, fill-height)
             v-card.d-md-inline-block.pa-2.mx-2(
               tile,
               width='80%',
-              height='100%'
+              height='100%',
+              color='#f8f8f8'
             )
               h3.text-center {{ landing.services.title[index] }}
               v-avatar(size='62', tile)
@@ -47,16 +48,16 @@ v-container(fluid, fill-height)
                 )
     v-col(cols=12, align='center')
       v-layout(align-center, justify-center)
-        v-sheet(height='50vh')
+        v-sheet(height='40vh')
         v-row
           v-col(cols=12)
             p.text-capitalize.text-h5.font-weight-medium {{ landing.contact.cta }}
           v-col(cols=12, md=6)
-            p.font-weight-bold.text-h6 Email: {{ landing.contact.email }}
+            p.font-weight-bold.text-h6 {{ landing.contact.email }}
           v-col(cols=12, md=6)
-            p.font-weight-bold.text-h6 Mobile: {{ landing.contact.phone }}
+            p.font-weight-bold.text-h6 {{ landing.contact.phone }}
           v-col(cols=12)
-            v-btn(text, x-large, to='about', color='primary') read more now
+            v-btn(x-large, to='about', color='primary') read more now
 </template>
 
 <script>
