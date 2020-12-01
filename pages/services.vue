@@ -1,6 +1,6 @@
 <template lang="pug">
 v-container.mb-10
-  p.text-center.text-h2.text-capitalize {{ services.title }}
+  p.text-center.text-h2.text-capitalize.blue-grey--text {{ services.title }}
   v-row
     v-col(
       v-for='(i, index) in services.services.title',
@@ -17,7 +17,7 @@ v-container.mb-10
                   hide-actions,
                   color='light-blue lighten-1'
                 ) 
-                  p.text-center.title.mb-n1 {{ services.services.title[index] }}
+                  p.text-center.title.mb-n1.text-capitalize {{ services.services.title[index] }}
                 v-expansion-panel-content.text-justify {{ services.services.content[index] }}
           v-col(cols='12', order='first', justify='center')
             v-img.mx-auto(

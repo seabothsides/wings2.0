@@ -1,13 +1,13 @@
 <template lang="pug">
 section
-  v-container.mb-10(fluid)
-    .text-h2.font-weight-medium.white--text.hidden-sm-and-down {{ about.title }}
-    .text-h2.hidden-md-and-up {{ about.title }}
-    v-row(justify='end')
-      v-col(cols='12', md='6')
+  .text-h2.font-weight-medium.white--text.hidden-sm-and-down.text-center.text-capitalize {{ about.title }}
+  v-row(justify='end', no-gutters)
+    v-col(cols='12', md='6')
+      v-container
+        .text-h2.hidden-md-and-up.text-center.mb-6.blue-grey--text {{ about.title }}
         p.pa-md-6.rounded-lg {{ about.content }}
-      v-col.hidden-md-and-up(cols='12')
-        v-img(:src='about.img')
+    v-col.hidden-md-and-up(order='first')
+      v-img(:src='about.img')
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 ---
-title: Getting started
-description: 'Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
+title: Contact us today
+description: we are always ready to hear from you, with any concerns or praises you may have about how we work
 content:
   For excellent care and support, get in touch with Wings health care recruitment LTD.
   If you would like more information about the services we provide or are in need of our services, please fill

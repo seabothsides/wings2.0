@@ -2,12 +2,13 @@
 v-container(fluid, fill-height)
   v-row
     v-col(cols=12, align='center')
-      h1.text-capitalize {{ landing.title }}
+      h1.text-capitalize.blue-grey--text {{ landing.title }}
       v-layout(align-center, justify-center)
         v-sheet(height='75vh')
         v-row
           v-col(cols=12, md=6)
-            p.text-h3.font-weight-black {{ landing.apply.content }}
+            p.text-h3.font-weight-black
+              nuxt-link(to='apply', style='text-decoration: none') {{ landing.apply.content }}
             p.overline Download our application form to the right
           v-col(cols=12, md=6)
             v-btn.v-btn--contained.primary.mt-2(
@@ -22,10 +23,10 @@ v-container(fluid, fill-height)
             )
               v-icon mdi-file-pdf
     v-col(cols=12, align='center')
-      v-btn(to='services', color='secondary', x-large) {{ landing.services.cta }}
+      v-btn.mb-6(to='services', color='secondary', x-large) {{ landing.services.cta }}
       v-layout(align-center, justify-center)
         v-sheet(height='40vh')
-        v-row(dense)
+        v-row
           v-col(
             v-for='(i, index) in landing.services.title',
             :key='index',
@@ -51,11 +52,13 @@ v-container(fluid, fill-height)
         v-sheet(height='40vh')
         v-row
           v-col(cols=12)
-            p.text-capitalize.text-h5.font-weight-medium {{ landing.contact.cta }}
+            p.text-capitalize.text-h5.font-weight-medium.blue-grey--text {{ landing.contact.cta }}
           v-col(cols=12, md=6)
-            p.font-weight-bold.text-h6 {{ landing.contact.email }}
+            p.font-weight-bold.text-h6
+              a(:href='`mailto:${landing.contact.email}`', target='_blank') {{ landing.contact.email }}
           v-col(cols=12, md=6)
-            p.font-weight-bold.text-h6 {{ landing.contact.phone }}
+            p.font-weight-bold.text-h6 
+              a(:href='`tel:${landing.contact.phone}`') {{ landing.contact.phone }}
           v-col(cols=12)
             v-btn(x-large, to='about', color='primary') read more now
 </template>

@@ -2,8 +2,10 @@
 v-row.mb-10(no-gutters, align='center')
   v-col
     v-img(:src='contact.img', max-height='370', fill)
-  v-col(cols='12', md='6')
-    p.pa-5 {{ contact.content }}
+  v-col.text-center(cols='12', md='6')
+    v-container
+      p.text-h2.text-capitalize.blue-grey--text.mt-3 {{ contact.title }}
+      p {{ contact.content }}
   v-col(cols='12', md='6')
     form.px-8.mx-md-8.px-md-8.my-md-8(
       ref='form',
